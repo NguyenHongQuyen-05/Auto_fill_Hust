@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Fill Form HUST",
+  "version": "4.1.0",
+  "description": "Extension to auto-fill form for HUST-ers by TMT Dep Trai",
+  "icons": {
+    "16": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
+  "action": {
+    "default_icon": "images/icon.png",
+    "default_title": "Auto Fill PL + QC 2026.1",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://forms.office.com/*",
+        "https://forms.cloud.microsoft/*"
+      ],
+      "js": [
+        "scripts/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "clipboardWrite",
+    "storage",
+    "activeTab"
+  ]
+}

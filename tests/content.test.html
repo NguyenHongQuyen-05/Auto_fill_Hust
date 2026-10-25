@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head><meta charset="UTF-8"><title>Auto Fill HUST — kiểm tra</title></head>
+<body>
+    <h1>Kiểm tra Auto Fill HUST</h1>
+    <pre id="results">Đang kiểm tra…</pre>
+    <div id="fixture" hidden></div>
+    <button id="fillForm" hidden>Fill Form</button>
+    <p id="fillStatus" hidden></p>
+    <script>
+        window.chrome = {
+            runtime: {
+                onMessage: { addListener(handler) { window.messageHandler = handler; } },
+            },
+            tabs: {
+                query(_query, callback) { callback([{ id: 1 }]); },
+                sendMessage(_id, message, callback) { window.messageHandler(message, {}, callback); },
+            },
+        };
+    </script>
+    <script src="../scripts/content.js"></script>
+    <script src="../scripts/popup.js"></script>
+    <script src="content.test.js"></script>
+</body>
+</html>
