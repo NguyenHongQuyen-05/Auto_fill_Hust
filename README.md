@@ -1,9 +1,5 @@
 # Auto Fill HUST — Quy chế 2026.1
 
-Tiện ích Chrome Manifest V3 hỗ trợ chọn đáp án trắc nghiệm trên Microsoft Forms.
-
-Phiên bản **4.1.0** cập nhật **200 câu Quy chế 2026.1**, đối chiếu các lựa chọn được đánh dấu trong `ĐÁP ÁN QUY CHẾ 2026.1.docx` do người dùng cung cấp. Tài liệu DOCX gốc được giữ tại máy, không kèm trong repository. Phần đáp án Pháp luật giữ nguyên từ bộ 2025.1, chưa được đối chiếu với tài liệu mới.
-
 ## Cài đặt
 
 1. Tải [ZIP của dự án](https://github.com/NguyenHongQuyen-05/Auto_fill_Hust/archive/refs/heads/main.zip) và giải nén, hoặc clone repository:
