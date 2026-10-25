@@ -29,7 +29,3 @@ Nếu đã cài bản cũ, tải bản mới, nhấn **Tải lại** trên thẻ
 5. Kiểm tra các lựa chọn và tự nộp bài sau khi hoàn tất.
 
 
-
-Mở `tests/content.test.html` bằng Chrome để chạy bộ kiểm tra trên DOM thật. Trang kiểm tra hiển thị kết quả cho bộ 200 câu Quy chế, việc xử lý dấu nháy/Unicode, các câu có đáp án giống nhau, câu chưa khớp và thao tác điền lại.
-
-Mã chính nằm trong `scripts/content.js`; liên kết bài thi nằm trong `popup.html`; phạm vi tên miền nằm trong `manifest.json`.
