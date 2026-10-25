@@ -28,24 +28,7 @@ Nếu đã cài bản cũ, tải bản mới, nhấn **Tải lại** trên thẻ
 4. Nếu biểu mẫu chia thành nhiều trang, chuyển sang trang tiếp theo và bấm **Fill Form** lại.
 5. Kiểm tra các lựa chọn và tự nộp bài sau khi hoàn tất.
 
-Tiện ích chỉ chọn đáp án khi khớp nội dung câu hỏi và lựa chọn trong bộ dữ liệu, có chuẩn hóa Unicode, khoảng trắng và dấu nháy. Các câu chưa khớp cần kiểm tra thủ công. Tiện ích không tự nhập thông tin cá nhân, câu tự luận hoặc tự nộp bài.
 
-## Thay đổi ở phiên bản 4.1.0
-
-- Thay bộ Quy chế cũ bằng 200 câu trong tài liệu 2026.1; giữ thứ tự câu nguồn trong chú thích ở `scripts/content.js` để đối chiếu.
-- Cập nhật liên kết Quy chế trong popup và hỗ trợ cả `forms.cloud.microsoft` lẫn `forms.office.com`.
-- So khớp đáp án trong phạm vi từng câu hỏi; xử lý được đáp án có dấu nháy và khoảng trắng thừa.
-- Trả kết quả thực tế cho popup và thông báo khi cần tải lại trang bài thi.
-
-## Kiểm tra mã
-
-Dùng Node.js để kiểm tra cú pháp:
-
-```powershell
-node --check scripts/content.js
-node --check scripts/popup.js
-node --check scripts/background.js
-```
 
 Mở `tests/content.test.html` bằng Chrome để chạy bộ kiểm tra trên DOM thật. Trang kiểm tra hiển thị kết quả cho bộ 200 câu Quy chế, việc xử lý dấu nháy/Unicode, các câu có đáp án giống nhau, câu chưa khớp và thao tác điền lại.
 
